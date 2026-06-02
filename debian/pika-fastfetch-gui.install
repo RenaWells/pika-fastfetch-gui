@@ -4,5 +4,12 @@ style.css usr/share/pika-fastfetch-gui/
 scripts/collect.sh usr/share/pika-fastfetch-gui/scripts/
 pika-fastfetch-gui.desktop usr/share/applications/
 data/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg usr/share/icons/hicolor/scalable/apps/
+data/icons/hicolor/16x16/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/16x16/apps/
+data/icons/hicolor/24x24/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/24x24/apps/
+data/icons/hicolor/32x32/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/32x32/apps/
+data/icons/hicolor/48x48/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/48x48/apps/
+data/icons/hicolor/64x64/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/64x64/apps/
+data/icons/hicolor/128x128/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/128x128/apps/
+data/icons/hicolor/256x256/apps/pika-fastfetch-gui.png usr/share/icons/hicolor/256x256/apps/
 README.md usr/share/doc/pika-fastfetch-gui/
 LICENSE usr/share/doc/pika-fastfetch-gui/

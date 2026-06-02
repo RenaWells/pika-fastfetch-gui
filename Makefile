@@ -16,6 +16,7 @@ install:
 	install -Dm755 scripts/collect.sh "$(DESTDIR)$(DATADIR)/scripts/collect.sh"
 	install -Dm644 pika-fastfetch-gui.desktop "$(DESTDIR)$(APPLICATIONSDIR)/pika-fastfetch-gui.desktop"
 	install -Dm644 data/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg "$(DESTDIR)$(ICONDIR)/pika-fastfetch-gui.svg"
+	for icon in data/icons/hicolor/*/apps/pika-fastfetch-gui.png; do install -Dm644 "$$icon" "$(DESTDIR)$(PREFIX)/share/icons/hicolor/$${icon#data/icons/hicolor/}"; done
 	install -Dm644 README.md "$(DESTDIR)$(DOCDIR)/README.md"
 	install -Dm644 LICENSE "$(DESTDIR)$(DOCDIR)/LICENSE"
 

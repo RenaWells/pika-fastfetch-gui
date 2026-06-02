@@ -32,9 +32,15 @@ install -Dm644 "$root/style.css" "$package_root/usr/share/pika-fastfetch-gui/sty
 install -Dm755 "$root/scripts/collect.sh" "$package_root/usr/share/pika-fastfetch-gui/scripts/collect.sh"
 install -Dm644 "$root/pika-fastfetch-gui.desktop" "$package_root/usr/share/applications/pika-fastfetch-gui.desktop"
 install -Dm644 "$root/data/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg" "$package_root/usr/share/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg"
+for icon in "$root"/data/icons/hicolor/*/apps/pika-fastfetch-gui.png; do
+  size_dir="$(basename "$(dirname "$(dirname "$icon")")")"
+  install -Dm644 "$icon" "$package_root/usr/share/icons/hicolor/$size_dir/apps/pika-fastfetch-gui.png"
+done
 install -Dm644 "$root/README.md" "$package_root/usr/share/doc/pika-fastfetch-gui/README.md"
 install -Dm644 "$root/LICENSE" "$package_root/usr/share/doc/pika-fastfetch-gui/LICENSE"
 install -Dm644 "$root/debian/copyright" "$package_root/usr/share/doc/pika-fastfetch-gui/copyright"
+install -Dm755 "$root/debian/postinst" "$package_root/DEBIAN/postinst"
+install -Dm755 "$root/debian/postrm" "$package_root/DEBIAN/postrm"
 
 if command -v gzip >/dev/null 2>&1; then
   gzip -n -9 -c "$root/debian/changelog" > "$package_root/usr/share/doc/pika-fastfetch-gui/changelog.Debian.gz"

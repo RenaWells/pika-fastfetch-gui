@@ -1,3 +1,9 @@
+pika-fastfetch-gui (1.0.3+pika1) pika; urgency=medium
+
+  * Add PNG hicolor app icons for application menu compatibility.
+
+ -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 12:35:00 -0400
+
 pika-fastfetch-gui (1.0.2+pika1) pika; urgency=medium
 
   * Refresh the app icon with an original PikaOS-inspired bird mark.
