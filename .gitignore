@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+dist/
+*.deb
+*.buildinfo
+*.changes
+*.dsc
+*.tar.*
+build/
+.pytest_cache/

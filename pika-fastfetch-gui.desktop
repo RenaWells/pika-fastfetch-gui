@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Pika Fetch
+Comment=Custom fastfetch-style system overview for PikaOS
+Exec=pika-fastfetch-gui
+Icon=utilities-system-monitor
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=true

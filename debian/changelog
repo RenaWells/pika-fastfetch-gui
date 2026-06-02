@@ -1,0 +1,6 @@
+pika-fastfetch-gui (1.0.0+pika1) pika; urgency=medium
+
+  * Initial PikaOS package.
+  * Add customizable GTK4/libadwaita fastfetch-style system overview.
+
+ -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 10:45:00 -0400

@@ -1,0 +1,30 @@
+Source: pika-fastfetch-gui
+Section: utils
+Priority: optional
+Maintainer: PikaOS Maintainers <contact@pika-os.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: pika-fastfetch-gui
+Architecture: all
+Depends:
+ ${misc:Depends},
+ bash,
+ coreutils,
+ gir1.2-adw-1,
+ gir1.2-gtk-4.0,
+ procps,
+ python3,
+ python3-gi
+Recommends:
+ libglib2.0-bin,
+ pciutils,
+ util-linux,
+ x11-xserver-utils
+Description: Custom fastfetch-style system overview for PikaOS
+ Pika Fetch is a GTK4/libadwaita desktop application that displays a
+ fastfetch-style system overview with configurable fields, colors, logo,
+ title, density, font sizes, copy support, export support, and auto refresh.
+ System facts are collected by a Bash script so downstream package updates can
+ adjust collection behavior without changing the GTK interface.

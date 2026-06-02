@@ -1,0 +1,6 @@
+pika-fastfetch-gui usr/bin/
+pika_fastfetch_gui.py usr/share/pika-fastfetch-gui/
+style.css usr/share/pika-fastfetch-gui/
+scripts/collect.sh usr/share/pika-fastfetch-gui/scripts/
+pika-fastfetch-gui.desktop usr/share/applications/
+README.md usr/share/doc/pika-fastfetch-gui/

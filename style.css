@@ -1,0 +1,65 @@
+.ascii-logo {
+  color: #79d08a;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.08;
+  min-width: 270px;
+}
+
+.preview {
+  background: linear-gradient(135deg, #141414, #1e2220);
+}
+
+.fetch-title {
+  color: #f7f5ef;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.info-list {
+  background: transparent;
+}
+
+.info-list row {
+  background: transparent;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.info-list row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.info-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comfortable-row {
+  padding: 8px 10px;
+}
+
+.compact-row {
+  padding: 4px 10px;
+}
+
+.info-key {
+  color: #79d08a;
+  font-family: monospace;
+  font-weight: 800;
+}
+
+.info-value {
+  color: #f7f5ef;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.status {
+  color: rgba(247, 245, 239, 0.68);
+  font-size: 12px;
+}
+
+.settings-scroll {
+  background: @window_bg_color;
+}
