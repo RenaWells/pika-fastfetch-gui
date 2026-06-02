@@ -14,6 +14,7 @@ Depends:
  coreutils,
  gir1.2-adw-1,
  gir1.2-gtk-4.0,
+ hicolor-icon-theme,
  procps,
  python3,
  python3-gi

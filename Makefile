@@ -5,6 +5,7 @@ BINDIR ?= $(PREFIX)/bin
 DATADIR ?= $(PREFIX)/share/pika-fastfetch-gui
 APPLICATIONSDIR ?= $(PREFIX)/share/applications
 DOCDIR ?= $(PREFIX)/share/doc/pika-fastfetch-gui
+ICONDIR ?= $(PREFIX)/share/icons/hicolor/scalable/apps
 
 .PHONY: install deb clean
 
@@ -14,6 +15,7 @@ install:
 	install -Dm644 style.css "$(DESTDIR)$(DATADIR)/style.css"
 	install -Dm755 scripts/collect.sh "$(DESTDIR)$(DATADIR)/scripts/collect.sh"
 	install -Dm644 pika-fastfetch-gui.desktop "$(DESTDIR)$(APPLICATIONSDIR)/pika-fastfetch-gui.desktop"
+	install -Dm644 data/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg "$(DESTDIR)$(ICONDIR)/pika-fastfetch-gui.svg"
 	install -Dm644 README.md "$(DESTDIR)$(DOCDIR)/README.md"
 	install -Dm644 LICENSE "$(DESTDIR)$(DOCDIR)/LICENSE"
 

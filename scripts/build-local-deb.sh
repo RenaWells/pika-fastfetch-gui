@@ -31,6 +31,7 @@ install -Dm755 "$root/pika_fastfetch_gui.py" "$package_root/usr/share/pika-fastf
 install -Dm644 "$root/style.css" "$package_root/usr/share/pika-fastfetch-gui/style.css"
 install -Dm755 "$root/scripts/collect.sh" "$package_root/usr/share/pika-fastfetch-gui/scripts/collect.sh"
 install -Dm644 "$root/pika-fastfetch-gui.desktop" "$package_root/usr/share/applications/pika-fastfetch-gui.desktop"
+install -Dm644 "$root/data/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg" "$package_root/usr/share/icons/hicolor/scalable/apps/pika-fastfetch-gui.svg"
 install -Dm644 "$root/README.md" "$package_root/usr/share/doc/pika-fastfetch-gui/README.md"
 install -Dm644 "$root/LICENSE" "$package_root/usr/share/doc/pika-fastfetch-gui/LICENSE"
 install -Dm644 "$root/debian/copyright" "$package_root/usr/share/doc/pika-fastfetch-gui/copyright"
@@ -52,7 +53,7 @@ Priority: optional
 Architecture: $arch
 Maintainer: PikaOS Maintainers <contact@pika-os.com>
 Installed-Size: $installed_size
-Depends: bash, coreutils, gir1.2-adw-1, gir1.2-gtk-4.0, procps, python3, python3-gi
+Depends: bash, coreutils, gir1.2-adw-1, gir1.2-gtk-4.0, hicolor-icon-theme, procps, python3, python3-gi
 Recommends: libglib2.0-bin, pciutils, util-linux, x11-xserver-utils
 Description: Custom fastfetch-style system overview for PikaOS
  Pika Fetch is a GTK4/libadwaita desktop application that displays a

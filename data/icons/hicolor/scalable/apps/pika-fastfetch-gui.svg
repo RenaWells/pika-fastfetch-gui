@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Pika Fetch">
+  <defs>
+    <linearGradient id="bg" x1="44" y1="26" x2="214" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101614"/>
+      <stop offset="0.55" stop-color="#1d2a23"/>
+      <stop offset="1" stop-color="#0f1211"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="108" y1="50" x2="166" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8ffd2"/>
+      <stop offset="0.48" stop-color="#79d08a"/>
+      <stop offset="1" stop-color="#35a665"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="60" y1="78" x2="204" y2="187" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#26332d"/>
+      <stop offset="1" stop-color="#121715"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="224" height="224" rx="54" fill="url(#bg)"/>
+  <path d="M70 36c-10 8-19 20-24 34 8-7 19-12 31-14 9-1 18 1 27 5-9-14-20-22-34-25Z" fill="#79d08a" opacity="0.22"/>
+  <path d="M186 36c10 8 19 20 24 34-8-7-19-12-31-14-9-1-18 1-27 5 9-14 20-22 34-25Z" fill="#79d08a" opacity="0.22"/>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="66" width="168" height="124" rx="24" fill="url(#screen)" stroke="#79d08a" stroke-width="6"/>
+    <rect x="62" y="85" width="132" height="86" rx="14" fill="#0b0f0d"/>
+    <path d="M93 105h45l-24 29h43l-62 57 22-43H82Z" fill="url(#bolt)"/>
+    <circle cx="75" cy="101" r="5" fill="#79d08a"/>
+    <circle cx="91" cy="101" r="5" fill="#f7f5ef" opacity="0.86"/>
+    <circle cx="107" cy="101" r="5" fill="#79d08a" opacity="0.64"/>
+  </g>
+
+  <g fill="#79d08a" opacity="0.82">
+    <rect x="68" y="205" width="120" height="12" rx="6"/>
+    <rect x="104" y="183" width="48" height="28" rx="8"/>
+  </g>
+
+  <g fill="#f7f5ef" opacity="0.78">
+    <rect x="151" y="115" width="30" height="6" rx="3"/>
+    <rect x="143" y="132" width="38" height="6" rx="3"/>
+    <rect x="135" y="149" width="46" height="6" rx="3"/>
+  </g>
+</svg>
