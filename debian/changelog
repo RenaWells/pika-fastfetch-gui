@@ -1,30 +1,37 @@
+pika-fastfetch-gui (1.0.5+pika1) pika; urgency=medium
+
+  * Document the recommended package-manager install path for PikaOS users.
+  * Update package maintainer metadata.
+
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 12:55:00 -0400
+
 pika-fastfetch-gui (1.0.4+pika1) pika; urgency=medium
 
   * Use an absolute PNG icon path in the desktop entry for launcher compatibility.
 
- -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 12:45:00 -0400
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 12:45:00 -0400
 
 pika-fastfetch-gui (1.0.3+pika1) pika; urgency=medium
 
   * Add PNG hicolor app icons for application menu compatibility.
 
- -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 12:35:00 -0400
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 12:35:00 -0400
 
 pika-fastfetch-gui (1.0.2+pika1) pika; urgency=medium
 
   * Refresh the app icon with an original PikaOS-inspired bird mark.
 
- -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 12:10:00 -0400
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 12:10:00 -0400
 
 pika-fastfetch-gui (1.0.1+pika1) pika; urgency=medium
 
   * Add a dedicated hicolor app icon for Linux app menus.
 
- -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 11:55:00 -0400
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 11:55:00 -0400
 
 pika-fastfetch-gui (1.0.0+pika1) pika; urgency=medium
 
   * Initial PikaOS package.
   * Add customizable GTK4/libadwaita fastfetch-style system overview.
 
- -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 10:45:00 -0400
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 10:45:00 -0400

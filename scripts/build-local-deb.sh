@@ -57,7 +57,7 @@ Version: $version
 Section: utils
 Priority: optional
 Architecture: $arch
-Maintainer: PikaOS Maintainers <contact@pika-os.com>
+Maintainer: RenaWells <rethundebnath123@gmail.com>
 Installed-Size: $installed_size
 Depends: bash, coreutils, gir1.2-adw-1, gir1.2-gtk-4.0, hicolor-icon-theme, procps, python3, python3-gi
 Recommends: libglib2.0-bin, pciutils, util-linux, x11-xserver-utils

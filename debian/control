@@ -1,7 +1,7 @@
 Source: pika-fastfetch-gui
 Section: utils
 Priority: optional
-Maintainer: PikaOS Maintainers <contact@pika-os.com>
+Maintainer: RenaWells <rethundebnath123@gmail.com>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
