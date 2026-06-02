@@ -91,3 +91,7 @@ That writes `dist/pika-fastfetch-gui_<version>_all.deb`.
 ## License
 
 Pika Fastfetch GUI is licensed under the GNU General Public License v3.0 or later. See `LICENSE`.
+
+## Changelog
+
+See `CHANGELOG.md` for release notes.
