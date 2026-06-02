@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 set -euo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
@@ -31,6 +32,7 @@ install -Dm644 "$root/style.css" "$package_root/usr/share/pika-fastfetch-gui/sty
 install -Dm755 "$root/scripts/collect.sh" "$package_root/usr/share/pika-fastfetch-gui/scripts/collect.sh"
 install -Dm644 "$root/pika-fastfetch-gui.desktop" "$package_root/usr/share/applications/pika-fastfetch-gui.desktop"
 install -Dm644 "$root/README.md" "$package_root/usr/share/doc/pika-fastfetch-gui/README.md"
+install -Dm644 "$root/LICENSE" "$package_root/usr/share/doc/pika-fastfetch-gui/LICENSE"
 install -Dm644 "$root/debian/copyright" "$package_root/usr/share/doc/pika-fastfetch-gui/copyright"
 
 if command -v gzip >/dev/null 2>&1; then

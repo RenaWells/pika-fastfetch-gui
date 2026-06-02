@@ -1,2 +1,3 @@
 #!/bin/sh
+# SPDX-License-Identifier: GPL-3.0-or-later
 exec python3 /usr/share/pika-fastfetch-gui/pika_fastfetch_gui.py "$@"
