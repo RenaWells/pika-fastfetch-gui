@@ -1,3 +1,9 @@
+pika-fastfetch-gui (1.0.6+pika1) pika; urgency=medium
+
+  * Add a native libadwaita About dialog with project, license, and debug info.
+
+ -- RenaWells <rethundebnath123@gmail.com>  Tue, 02 Jun 2026 16:47:49 -0400
+
 pika-fastfetch-gui (1.0.5+pika1) pika; urgency=medium
 
   * Document the recommended package-manager install path for PikaOS users.

@@ -15,6 +15,12 @@ from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 
 
 APP_ID = "local.pika.FastfetchGui"
+APP_NAME = "Pika Fetch"
+APP_ICON_NAME = "pika-fastfetch-gui"
+APP_VERSION = "1.0.6+pika1"
+APP_DEVELOPER = "RenaWells"
+PROJECT_URL = "https://github.com/RenaWells/pika-fastfetch-gui"
+ISSUE_URL = f"{PROJECT_URL}/issues"
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 COLLECTOR = BASE_DIR / "scripts" / "collect.sh"
 CONFIG_DIR = pathlib.Path.home() / ".config" / "pika-fastfetch-gui"
@@ -162,7 +168,7 @@ class InfoRow(Gtk.Box):
 
 class FastfetchWindow(Adw.ApplicationWindow):
     def __init__(self, app: Adw.Application) -> None:
-        super().__init__(application=app, title="Pika Fetch")
+        super().__init__(application=app, title=APP_NAME)
         self.set_default_size(1120, 680)
         self.set_size_request(760, 500)
 
@@ -176,6 +182,7 @@ class FastfetchWindow(Adw.ApplicationWindow):
             self.dynamic_css,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1,
         )
+        self._install_actions()
 
         self.toast_overlay = Adw.ToastOverlay()
         self.set_content(self.toast_overlay)
@@ -184,8 +191,11 @@ class FastfetchWindow(Adw.ApplicationWindow):
         self.toast_overlay.set_child(toolbar_view)
 
         header = Adw.HeaderBar()
-        header.set_title_widget(Adw.WindowTitle(title="Pika Fetch", subtitle="Custom fastfetch-style dashboard"))
+        header.set_title_widget(Adw.WindowTitle(title=APP_NAME, subtitle="Custom fastfetch-style dashboard"))
         toolbar_view.add_top_bar(header)
+
+        menu_button = self._build_menu_button()
+        header.pack_end(menu_button)
 
         refresh_button = Gtk.Button(icon_name="view-refresh-symbolic")
         refresh_button.set_tooltip_text("Refresh")
@@ -263,6 +273,21 @@ class FastfetchWindow(Adw.ApplicationWindow):
 
         self._apply_settings(save=False)
         self.refresh()
+
+    def _install_actions(self) -> None:
+        about_action = Gio.SimpleAction.new("about", None)
+        about_action.connect("activate", self._show_about)
+        self.add_action(about_action)
+
+    def _build_menu_button(self) -> Gtk.MenuButton:
+        menu = Gio.Menu()
+        menu.append(f"About {APP_NAME}", "win.about")
+
+        menu_button = Gtk.MenuButton()
+        menu_button.set_icon_name("open-menu-symbolic")
+        menu_button.set_tooltip_text("Main menu")
+        menu_button.set_menu_model(menu)
+        return menu_button
 
     def _build_settings_panel(self) -> Gtk.Widget:
         page = Adw.PreferencesPage()
@@ -485,6 +510,51 @@ class FastfetchWindow(Adw.ApplicationWindow):
             row.set_active(field in FIELD_ORDER)
         self._apply_settings()
         self.toast_overlay.add_toast(Adw.Toast(title="Customization reset"))
+
+    def _show_about(self, _action: Gio.SimpleAction, _parameter: GLib.Variant | None) -> None:
+        about_kwargs = {
+            "application_name": APP_NAME,
+            "application_icon": APP_ICON_NAME,
+            "developer_name": APP_DEVELOPER,
+            "version": APP_VERSION,
+            "comments": "Custom fastfetch-style system dashboard for PikaOS 4.",
+            "website": PROJECT_URL,
+            "issue_url": ISSUE_URL,
+            "debug_info": self._debug_info(),
+            "debug_info_filename": "pika-fetch-debug.txt",
+            "copyright": "Copyright (C) 2026 RenaWells",
+            "license_type": Gtk.License.GPL_3_0,
+        }
+
+        if hasattr(Adw, "AboutDialog"):
+            about = Adw.AboutDialog(**about_kwargs)
+            self._set_about_credits(about)
+            about.present(self)
+            return
+
+        about = Adw.AboutWindow(transient_for=self, modal=True, **about_kwargs)
+        self._set_about_credits(about)
+        about.present()
+
+    def _set_about_credits(self, about: Any) -> None:
+        about.set_developers([APP_DEVELOPER])
+        about.set_designers([APP_DEVELOPER])
+        about.set_artists([APP_DEVELOPER])
+
+    def _debug_info(self) -> str:
+        rows_by_key = {key: value for key, value in self.data}
+        return "\n".join(
+            [
+                f"App ID: {APP_ID}",
+                f"Version: {APP_VERSION}",
+                f"GTK: {Gtk.MAJOR_VERSION}.{Gtk.MINOR_VERSION}.{Gtk.MICRO_VERSION}",
+                f"libadwaita: {Adw.MAJOR_VERSION}.{Adw.MINOR_VERSION}.{Adw.MICRO_VERSION}",
+                f"OS: {rows_by_key.get('OS', 'Unknown')}",
+                f"Kernel: {rows_by_key.get('Kernel', 'Unknown')}",
+                f"Desktop: {rows_by_key.get('Desktop', 'Unknown')}",
+                f"Session: {rows_by_key.get('Session', 'Unknown')}",
+            ]
+        )
 
     def _apply_settings(self, save: bool = True) -> None:
         if save:

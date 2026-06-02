@@ -26,6 +26,7 @@ sudo apt install pika-fastfetch-gui
 - Auto refresh with configurable interval
 - Copy the current summary to clipboard
 - Export the current summary to `~/pika-fetch-summary.txt`
+- Native libadwaita About dialog with project, license, and debug details
 - Settings saved in `~/.config/pika-fastfetch-gui/settings.json`
 
 ## Run
