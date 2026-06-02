@@ -1,3 +1,9 @@
+pika-fastfetch-gui (1.0.4+pika1) pika; urgency=medium
+
+  * Use an absolute PNG icon path in the desktop entry for launcher compatibility.
+
+ -- PikaOS Maintainers <contact@pika-os.com>  Tue, 02 Jun 2026 12:45:00 -0400
+
 pika-fastfetch-gui (1.0.3+pika1) pika; urgency=medium
 
   * Add PNG hicolor app icons for application menu compatibility.
