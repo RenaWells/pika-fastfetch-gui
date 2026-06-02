@@ -1,5 +1,9 @@
 # Pika Fastfetch GUI
 
+<p align="center">
+  <img src="data/icons/hicolor/256x256/apps/pika-fastfetch-gui.png" alt="Pika Fetch logo" width="160">
+</p>
+
 A customizable fastfetch-style GTK 4/libadwaita desktop app for PikaOS 4.
 
 The GTK app is written in Python. System facts are collected by `scripts/collect.sh`, so the data layer is easy to customize with normal Bash.
