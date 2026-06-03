@@ -8,6 +8,10 @@ A customizable fastfetch-style GTK 4/libadwaita desktop app for PikaOS 4.
 
 The GTK app is written in Python. System facts are collected by `scripts/collect.sh`, so the data layer is easy to customize with normal Bash.
 
+## Support
+
+Pika Fastfetch GUI officially supports PikaOS only.
+
 ## Recommended Install For PikaOS Users
 
 Use the signed apt repository so the app updates through the package manager:
